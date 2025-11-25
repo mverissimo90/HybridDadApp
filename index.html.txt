@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hybrid Dad Athlete</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+  <header>
+    <h1>Hybrid Dad Athlete</h1>
+  </header>
+
+  <nav class="tabs">
+    <button onclick="showTab('today')">Today</button>
+    <button onclick="showTab('program')">Program</button>
+    <button onclick="showTab('mesocycle')">Mesocycle</button>
+    <button onclick="showTab('nutrition')">Nutrition</button>
+    <button onclick="showTab('notes')">Notes</button>
+  </nav>
+
+  <main>
+
+    <!-- TODAY TAB -->
+    <section id="today" class="tab-content"></section>
+
+    <!-- PROGRAM TAB -->
+    <section id="program" class="tab-content hidden">
+      <h2>Weekly Plan</h2>
+
+      <!-- MONDAY -->
+      <div class="day-block" data-day="Monday">
+        <h3>Monday — Full Body Strength + Power</h3>
+        <ul>
+
+          <li class="exercise">
+            <input type="checkbox" class="cb">
+            <span class="label">Cat-Cow × 10</span>
+            <input class="weight" placeholder="Wt">
+            <input class="reps" placeholder="Reps">
+          </li>
+
+          <li class="exercise">
+            <input type="checkbox" class="cb">
+            <span class="label">Banded Shoulder Rotations × 15</span>
+            <input class="weight" placeholder="Wt">
+            <input class="reps" placeholder="Reps">
+          </li>
+
+          <li class="exercise">
+            <input type="checkbox" class="cb">
+            <span class="label">Goblet Squat Hold 30s</span>
+            <input class="weight" placeholder="Wt">
+            <input class="reps" placeholder="Reps">
+          </li>
+
+          <li class="exercise">
+            <input type="checkbox" class="cb">
+            <span class="label">Wrist/Forearm Warm-Up</span>
+            <input class="weight" placeholder="Wt">
+            <input class="reps" placeholder="Reps">
+          </li>
+
+          <li class="exercise">
+            <input type="checkbox" class="cb">
+            <span class="label">Back Squat 4×5 (RPE 7)</span>
+            <input class="weight" placeholder="Wt">
+            <input class="reps" placeholder="Reps">
+          </li>
+
+          <li class="exercise">
+            <input type="checkbox" class="cb">
+            <span class="label">Incline DB Bench 4×8</span>
+            <input class="weight" placeholder="Wt">
+            <input class="reps" placeholder="Reps">
+          </li>
+
+          <li class="exercise">
+            <input type="checkbox" class="cb">
+            <span class="label">Chest-Supported Row 4×10</span>
+            <input class="weight" placeholder="Wt">
+            <input class="reps" placeholder="Reps">
+          </li>
+
+          <li class="exercise">
+            <input type="checkbox" class="cb">
+            <span class="label">Leg Press 3×12</span>
+            <input class="weight" placeholder="Wt">
+            <input class="reps" placeholder="Reps">
+          </li>
+
+          <li class="exercise">
+            <input type="checkbox" class="cb">
+            <span class="label">Cable Laterals 3×15</span>
+            <input class="weight" placeholder="Wt">
+            <input class="reps" placeholder="Reps">
+          </li>
+
+          <li class="exercise">
+            <input type="checkbox" class="cb">
+            <span class="label">Rope Triceps Extensions 3×12</span>
+            <input class="weight" placeholder="Wt">
+            <input class="reps" placeholder="Reps">
+          </li>
+
+          <li class="exercise">
+            <input type="checkbox" class="cb">
+            <span class="label">Hammer Curls 3×10</span>
+            <input class="weight" placeholder="Wt">
+            <input class="reps" placeholder="Reps">
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- TUESDAY -->
+      <div class="day-block" data-day="Tuesday">
+        <h3>Tuesday — Hybrid Athletic (Optional)</h3>
+        <ul>
+
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Leg Swings × 10</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Band Pull-Aparts × 20</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Forearm/Elbow Prep × 20</span><input class="weight"><input class="reps"></li>
+
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Treadmill Sprints 6×20/40</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Assault Bike 10–15 min HIIT</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Sled Push/Pull 4–5 × 20m</span><input class="weight"><input class="reps"></li>
+
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Machine Chest Press 3×10–12</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Seated Cable Row 3×10–12</span><input class="weight"><input class="reps"></li>
+
+        </ul>
+      </div>
+
+      <!-- WEDNESDAY -->
+      <div class="day-block" data-day="Wednesday">
+        <h3>Wednesday — Full Body Hypertrophy</h3>
+        <ul>
+          
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Dynamic Warm-Up</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Band Pull-Aparts × 20</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Wrist Prep × 20</span><input class="weight"><input class="reps"></li>
+
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">RDL 4×8</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">DB Bench 4×8–10</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Seated Cable Row 4×10</span><input class="weight"><input class="reps"></li>
+
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Leg Extension × 15</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Lateral Raise × 12</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Rope Curls × 12</span><input class="weight"><input class="reps"></li>
+
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Hanging Knee Raises 3×10–12</span><input class="weight"><input class="reps"></li>
+
+        </ul>
+      </div>
+
+      <!-- THURSDAY -->
+      <div class="day-block" data-day="Thursday">
+        <h3>Thursday — Lower / Power</h3>
+        <ul>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Leg Press 4×12</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Bulgarian Split Squat 3×8/leg</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Seated Leg Curl 3×12</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Calf Raises 3×12</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Back Extension 3×12</span><input class="weight"><input class="reps"></li>
+        </ul>
+      </div>
+
+      <!-- FRIDAY -->
+      <div class="day-block" data-day="Friday">
+        <h3>Friday — Strength + Pump</h3>
+        <ul>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Row 3 min</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Band Shoulder Prep</span><input class="weight"><input class="reps"></li>
+
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Front/Goblet Squat 3×5</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Machine Chest Press 4×8</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Cable Pulldown 4×8</span><input class="weight"><input class="reps"></li>
+
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Lateral Raise × 15</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Chest-Supported Row × 12</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Tricep Pushdown × 12</span><input class="weight"><input class="reps"></li>
+          <li class="exercise"><input type="checkbox" class="cb"><span class="label">Hammer Curls × 10</span><input class="weight"><input class="reps"></li>
+        </ul>
+      </div>
+
+    </section> <!-- END PROGRAM -->
+
+    <!-- MESOCYCLE -->
+    <section id="mesocycle" class="tab-content hidden">
+      <h2>Mesocycle</h2>
+      <p>Week 1 — Base (RPE 6–7)</p>
+      <p>Week 2 — Overload (+5 lbs / +1–2 reps)</p>
+      <p>Week 3 — Peak Volume (RPE 8)</p>
+      <p>Week 4 — Deload (60–65%)</p>
+    </section>
+
+    <!-- NUTRITION -->
+    <section id="nutrition" class="tab-content hidden">
+      <h2>Nutrition</h2>
+      <ul>
+        <li>Calories: 2650</li>
+        <li>Protein: 190–210g</li>
+        <li>Carbs: 240–275g</li>
+        <li>Fat: 70–80g</li>
+        <li>Water: 2–3L/day</li>
+      </ul>
+    </section>
+
+    <!-- NOTES -->
+    <section id="notes" class="tab-content hidden">
+      <h2>Notes</h2>
+      <textarea id="notesBox" placeholder="Daily notes..."></textarea>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

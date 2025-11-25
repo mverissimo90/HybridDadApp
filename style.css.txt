@@ -1,0 +1,95 @@
+/* BASIC APP LAYOUT */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+}
+
+header {
+  background: #222;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 22px;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  background: #444;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 12px;
+  background: #444;
+  border: none;
+  color: white;
+  font-size: 16px;
+}
+
+.tabs button:hover {
+  background: #555;
+}
+
+/* CONTENT AREA */
+.tab-content {
+  padding: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* DAY HEADERS */
+.day-block {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.day-block h3 {
+  margin-top: 0;
+}
+
+/* EXERCISE ROWS */
+.exercise {
+  display: flex;
+  align-items: center;
+  background: #fafafa;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  gap: 8px;
+}
+
+/* Checkbox spacing */
+.exercise .cb {
+  width: 20px;
+  height: 20px;
+}
+
+/* Exercise name */
+.exercise .label {
+  flex: 1;
+  font-size: 15px;
+}
+
+/* Weight + Reps inputs */
+.exercise input.weight,
+.exercise input.reps {
+  width: 55px;
+  padding: 4px;
+  font-size: 14px;
+}
+
+/* Notes box */
+#notesBox {
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+}

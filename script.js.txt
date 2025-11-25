@@ -1,0 +1,66 @@
+// SWITCH TABS
+function showTab(id) {
+  document.querySelectorAll(".tab-content").forEach(tab => {
+    tab.classList.add("hidden");
+  });
+  document.getElementById(id).classList.remove("hidden");
+  localStorage.setItem("currentTab", id);
+}
+
+// Restore last opened tab
+const savedTab = localStorage.getItem("currentTab") || "program";
+showTab(savedTab);
+
+// AUTO-POPULATE TODAY TAB BASED ON DAY OF WEEK
+const todayNames = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const todayOfWeek = todayNames[new Date().getDay()];
+const todayTab = document.getElementById("today");
+
+todayTab.innerHTML = `<h2>Today: ${todayOfWeek}</h2>`;
+
+let todayBlock = document.querySelector(`[data-day="${todayOfWeek}"]`);
+if (todayBlock) {
+  todayTab.appendChild(todayBlock.cloneNode(true));
+} else {
+  todayTab.innerHTML += "<p>Rest / Active Recovery</p>";
+}
+
+// SAVE CHECKBOX STATES
+const checkboxes = document.querySelectorAll(".cb");
+checkboxes.forEach((cb, i) => {
+  // restore
+  cb.checked = localStorage.getItem("cb" + i) === "true";
+
+  // save
+  cb.addEventListener("change", () => {
+    localStorage.setItem("cb" + i, cb.checked);
+  });
+});
+
+// SAVE WEIGHTS & REPS
+document.querySelectorAll(".exercise").forEach((ex, index) => {
+  const w = ex.querySelector(".weight");
+  const r = ex.querySelector(".reps");
+
+  // restore saved values
+  w.value = localStorage.getItem("w" + index) || "";
+  r.value = localStorage.getItem("r" + index) || "";
+
+  // save on typing
+  w.addEventListener("input", () => localStorage.setItem("w" + index, w.value));
+  r.addEventListener("input", () => localStorage.setItem("r" + index, r.value));
+});
+
+// NOTES TAB SAVING
+const notesBox = document.getElementById("notesBox");
+if (notesBox) {
+  notesBox.value = localStorage.getItem("notes") || "";
+  notesBox.addEventListener("input", () => {
+    localStorage.setItem("notes", notesBox.value);
+  });
+}
+
+// REGISTER SERVICE WORKER FOR OFFLINE SUPPORT
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
